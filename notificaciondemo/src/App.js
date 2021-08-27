@@ -17,7 +17,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+        <button id="button" >
+            Enviar notificación
+        </button>
+      </header>       
     </div>
   );
 }
