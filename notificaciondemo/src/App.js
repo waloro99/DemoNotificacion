@@ -47,10 +47,11 @@ function App() {
 function notificacion(titulo = "SOLICITUD DE VIAJE", mensaje = "Un usuario esta solicitando permiso!!!", icono = "notificacion.png") {
   // Se crea la variable notificacion sin iniciarla
   var notificacion;
+
   // Se verifica el soporte de notificaciones en el navegador
   if (!("Notification" in window)) {
       alert("Notificaciones no soportadas");
-
+      console.log("x");
   }else if(Notification.requestPermission === "granted"){
       // Envía la notificación cuando esta autorizado en el navegador
               notificacion = new Notification(titulo,{body: mensaje, icon: icono});
